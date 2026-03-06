@@ -45,5 +45,5 @@ This project is open source and available under the MIT License.
 
 ---
 
-Made with ❤️ by Anuja Awchar
+Made by Anuja Awchar
 
