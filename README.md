@@ -36,7 +36,6 @@ View the portfolio live at: [https://anuja-awchar.github.io/portfolio](https://a
 
 - **GitHub**: [https://github.com/anuja-awchar](https://github.com/anuja-awchar)
 - **LinkedIn**: [https://linkedin.com/in/anujaawchar](https://linkedin.com/in/anujaawchar)
-- **Twitter**: [https://twitter.com/anujaawchar](https://twitter.com/anujaawchar)
 - **Email**: anujaawchar@gmail.com
 
 ## 📄 License
