@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuja Awchar - Full Stack Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Anuja Awchar, a passionate full-stack developer specializing in React, Node.js, and modern web technologies.">
-    <meta name="keywords" content="full stack developer, React, Node.js, portfolio, web development, UI/UX designer">
+    <title>Anuja Awchar - Full Stack Java Developer & UI/UX Designer</title>
+    <meta name="description"
+        content="Portfolio of Anuja Awchar, a Computer Science Engineering student and full-stack developer specializing in Core Java, Spring Boot, microservices, and modern React web applications.">
+    <meta name="keywords" content="Java Developer, Spring Boot, Full Stack Developer, React, Node.js, Portfolio, Software Engineer, UI/UX Designer">
     <meta name="author" content="Anuja Awchar">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366f1'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23g)'/><text x='50%' y='66%' font-size='42' font-weight='800' font-family='sans-serif' fill='white' text-anchor='middle'>AA</text></svg>">
+    
     <!-- Open Graph -->
-    <meta property="og:title" content="Anuja Awchar - Full Stack Developer Portfolio">
-    <meta property="og:description" content="Portfolio showcasing projects in web development and design.">
+    <meta property="og:title" content="Anuja Awchar - Full Stack Java Developer & UI/UX Designer">
+    <meta property="og:description" content="Explore my projects in Java enterprise development, Spring Boot, and modern web applications.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/125723486?v=4">
-    <meta property="og:url" content="https://anujaawchar.dev">
+    <meta property="og:url" content="https://anuja-awchar.github.io/portfolio">
     <meta property="og:type" content="website">
+    
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
                     colors: {
                         primary: '#6366f1',
                         secondary: '#1e1b4b',
@@ -46,40 +64,43 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-gray-50 dark:bg-dark transition-colors duration-300">
+<body class="bg-gray-50 dark:bg-dark text-gray-800 dark:text-gray-100 transition-colors duration-300 font-sans selection:bg-primary/20 selection:text-primary">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-md z-50 shadow-sm border-b border-gray-100 dark:border-gray-800">
+    <nav class="fixed top-0 left-0 right-0 w-full bg-white/85 dark:bg-dark/85 backdrop-blur-md z-50 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    Anuja<span class="text-gray-800 dark:text-white">.dev</span>
+                <a href="#home" class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent flex items-center gap-1.5">
+                    Anuja<span class="text-gray-900 dark:text-white">.dev</span>
                 </a>
 
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#timeline" class="nav-link">Timeline</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#github" class="nav-link">GitHub</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
 
-                <div class="flex items-center space-x-4">
-                    <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer" 
-                       class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white transition-all" 
-                       aria-label="GitHub Profile">
+                <div class="flex items-center space-x-3 sm:space-x-4">
+                    <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer"
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white transition-all text-gray-700 dark:text-gray-300 flex items-center justify-center min-w-[42px] min-h-[42px]"
+                        aria-label="GitHub Profile" title="GitHub Profile">
                         <i class="fab fa-github text-lg"></i>
                     </a>
-                    
-                    <button id="themeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white transition-all" aria-label="Toggle dark mode">
-                        <span class="dark:hidden">🌙</span>
-                        <span class="hidden dark:inline">☀️</span>
+
+                    <button id="themeToggle"
+                        class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white transition-all text-gray-700 dark:text-gray-300 flex items-center justify-center min-w-[42px] min-h-[42px]"
+                        aria-label="Toggle dark mode" title="Toggle theme">
+                        <span class="dark:hidden text-lg">🌙</span>
+                        <span class="hidden dark:inline text-lg">☀️</span>
                     </button>
 
-                    <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <button id="mobileMenuButton" class="lg:hidden p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors min-w-[42px] min-h-[42px] flex items-center justify-center"
+                        aria-label="Toggle navigation menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -89,84 +110,87 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
-            <div class="px-4 py-4 space-y-2">
-                <a href="#home" class="block py-2 nav-link-mobile">Home</a>
-                <a href="#about" class="block py-2 nav-link-mobile">About</a>
-                <a href="#skills" class="block py-2 nav-link-mobile">Skills</a>
-                <a href="#projects" class="block py-2 nav-link-mobile">Projects</a>
-                <a href="#github" class="block py-2 nav-link-mobile">GitHub</a>
-                <a href="#contact" class="block py-2 nav-link-mobile">Contact</a>
+        <div id="mobileMenu" class="lg:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 shadow-xl transition-all">
+            <div class="px-5 py-4 space-y-2 max-h-[80vh] overflow-y-auto">
+                <a href="#home" class="block py-2.5 nav-link-mobile">Home</a>
+                <a href="#about" class="block py-2.5 nav-link-mobile">About</a>
+                <a href="#timeline" class="block py-2.5 nav-link-mobile">Education & Timeline</a>
+                <a href="#skills" class="block py-2.5 nav-link-mobile">Skills & Java Expertise</a>
+                <a href="#projects" class="block py-2.5 nav-link-mobile">Featured Projects</a>
+                <a href="#github" class="block py-2.5 nav-link-mobile">GitHub Stats</a>
+                <a href="#contact" class="block py-2.5 nav-link-mobile">Contact Me</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-16">
         <!-- Animated Background -->
-        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-white to-accent/20 dark:from-primary/10 dark:via-dark dark:to-accent/10"></div>
-        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-        <div class="absolute bottom-20 right-10 w-72 h-72 bg-accent/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-float"></div>
-        
-        <!-- Grid Pattern -->
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMxZTJiNGIiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-50"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/15 via-white to-accent/15 dark:from-primary/10 dark:via-dark dark:to-accent/10 pointer-events-none"></div>
+        <div class="absolute top-24 left-6 sm:left-12 w-64 sm:w-80 h-64 sm:h-80 bg-primary/25 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow pointer-events-none"></div>
+        <div class="absolute bottom-20 right-6 sm:right-12 w-64 sm:w-80 h-64 sm:h-80 bg-accent/25 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow pointer-events-none" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/15 rounded-full filter blur-3xl animate-float pointer-events-none"></div>
 
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-12 mb-16">
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMxZTJiNGIiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-60 pointer-events-none"></div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-12">
             <div class="animate-fade-in-up">
-                <!-- Avatar with glow effect -->
+                <!-- Avatar badge with status glow -->
                 <div class="relative inline-block mb-8">
-                    <div class="w-40 h-40 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary via-purple-500 to-accent p-1">
+                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary via-purple-500 to-accent p-1.5 transition-transform duration-500 hover:scale-105">
                         <div class="w-full h-full rounded-full bg-white dark:bg-dark flex items-center justify-center">
-                            <span class="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AA</span>
+                            <span class="text-5xl sm:text-6xl font-extrabold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AA</span>
                         </div>
                     </div>
-                    <div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white dark:border-dark animate-pulse"></div>
+                    <div class="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 bg-green-500 w-6 h-6 sm:w-7 sm:h-7 rounded-full border-4 border-white dark:border-dark animate-pulse shadow-md" title="Available for work"></div>
                 </div>
 
-                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4 font-medium">
-                    <span class="inline-flex items-center gap-2">
-                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                        Available for work
-                    </span>
-                </p>
-                
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-sm mb-6">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">Open for Full Stack & Java Developer Roles</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
                     <span class="bg-gradient-to-r from-gray-900 via-primary to-gray-900 dark:from-white dark:via-primary dark:to-white bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient">
                         Hi, I'm Anuja Awchar
                     </span>
                 </h1>
-                
-                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-semibold">
-                    Full Stack Developer & <span class="text-primary">UI/UX Designer</span>
+
+                <p class="text-xl sm:text-2xl text-gray-700 dark:text-gray-200 mb-4 font-bold">
+                    Full Stack <span class="text-primary underline decoration-primary/40 decoration-wavy">Java Developer</span> & <span class="text-purple-600 dark:text-purple-400">UI/UX Designer</span>
                 </p>
-                <p class="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                    Building scalable web applications with modern technologies. 
-                    Passionate about creating elegant solutions to complex problems.
+                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed px-2">
+                    Specializing in robust enterprise applications built with <strong class="text-gray-900 dark:text-gray-200">Core Java, Spring Boot, & MySQL</strong>, combined with sleek, responsive web experiences using <strong class="text-gray-900 dark:text-gray-200">React & Tailwind CSS</strong>.
                 </p>
-                
-                <div class="flex flex-wrap justify-center gap-4 mb-8">
-                    <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-primary to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-1">
-                        View My Work
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-12">
+                    <a href="#projects"
+                        class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-primary to-purple-600 text-white rounded-full font-bold shadow-lg hover:shadow-primary/40 transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 min-h-[48px]">
+                        <i class="fas fa-layer-group"></i> View My Work
                     </a>
-                    <a href="#contact" class="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-full font-semibold hover:border-primary hover:text-primary transition-all">
-                        Contact Me
+                    <a href="#contact"
+                        class="w-full sm:w-auto px-8 py-3.5 border-2 border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-bold hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all active:scale-95 flex items-center justify-center gap-2 min-h-[48px] bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+                        <i class="fas fa-paper-plane"></i> Contact Me
                     </a>
                 </div>
 
                 <!-- Social Links -->
-                <div class="flex justify-center gap-4 mb-12">
-                    <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer" 
-                       class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all transform hover:scale-110">
+                <div class="flex justify-center items-center gap-4 sm:gap-5">
+                    <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer"
+                        class="w-12 h-12 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all transform hover:scale-110 active:scale-95"
+                        aria-label="GitHub Profile">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <a href="https://linkedin.com/in/anujaawchar" target="_blank" rel="noopener noreferrer" 
-                       class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all transform hover:scale-110">
+                    <a href="https://linkedin.com/in/anujaawchar" target="_blank" rel="noopener noreferrer"
+                        class="w-12 h-12 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all transform hover:scale-110 active:scale-95"
+                        aria-label="LinkedIn Profile">
                         <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
-                    
-                    <a href="mailto:anujaawchar@gmail.com" 
-                       class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all transform hover:scale-110">
+
+                    <a href="mailto:anujaawchar@gmail.com"
+                        class="w-12 h-12 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all transform hover:scale-110 active:scale-95"
+                        aria-label="Send Email">
                         <i class="fas fa-envelope text-xl"></i>
                     </a>
                 </div>
@@ -174,246 +198,411 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2" style="margin-top: 40px;">
-            <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center pt-2">
-                <div class="w-1 h-3 bg-gray-400 rounded-full animate-pulse"></div>
-            </div>
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 hidden sm:block pointer-events-none">
+            <a href="#about" class="flex flex-col items-center text-gray-400 hover:text-primary transition-colors pointer-events-auto">
+                <span class="text-xs font-semibold uppercase tracking-wider mb-2">Scroll Down</span>
+                <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center pt-2">
+                    <div class="w-1.5 h-3 bg-primary rounded-full animate-bounce"></div>
+                </div>
+            </a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 pt-24 bg-white dark:bg-gray-900">
+    <section id="about" class="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Introduction</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">About Me</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="order-1 md:order-2">
-                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                        Building Digital Experiences with <span class="text-primary">Passion and Precision</span>
+                <div class="order-1 md:order-2 space-y-5">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white leading-snug">
+                        Architecting Enterprise Solutions with <span class="text-primary">Core Java & Modern Web Tech</span>
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
-                        I'm a Computer Science Engineering student and aspiring full-stack developer with a strong interest in building modern web applications. I enjoy transforming complex problems into simple, efficient, and user-friendly solutions.
+                    <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+                        I am a Computer Science Engineering student and dedicated software engineer with deep passion for **Object-Oriented Programming (OOP)**, **Data Structures & Algorithms**, and scalable system architecture.
                     </p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8">
-                        I enjoy exploring new technologies, building projects, and continuously improving my development skills. I believe in lifelong learning and staying updated with the latest trends in software and web development.
+                    <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+                        My primary technical focus lies in developing enterprise-grade backend services using **Core Java, Spring Boot, JDBC, and MySQL**, while also building intuitive, highly responsive user interfaces with **React, TypeScript, and Tailwind CSS**. I thrive on turning complex business requirements into high-performance software.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-xl">
-                            <p class="font-semibold text-gray-900 dark:text-white">Name</p>
-                            <p class="text-gray-600 dark:text-gray-300">Anuja Awchar</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
+                        <div class="bg-gray-50 dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/60 p-4 rounded-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Full Name</p>
+                                <p class="font-bold text-gray-900 dark:text-white">Anuja Awchar</p>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-xl">
-                            <p class="font-semibold text-gray-900 dark:text-white">Email</p>
-                            <p class="text-gray-600 dark:text-gray-300">anujaawchar@gmail.com</p>
+                        <div class="bg-gray-50 dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/60 p-4 rounded-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-600 dark:text-green-400 font-bold">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Current Status</p>
+                                <p class="font-bold text-green-600 dark:text-green-400">Open to Opportunities</p>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-xl">
-                            <p class="font-semibold text-gray-900 dark:text-white">Location</p>
-                            <p class="text-gray-600 dark:text-gray-300">India</p>
+                        <div class="bg-gray-50 dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/60 p-4 rounded-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Email Address</p>
+                                <p class="font-bold text-gray-900 dark:text-white text-sm break-all">anujaawchar@gmail.com</p>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-xl">
-                            <p class="font-semibold text-gray-900 dark:text-white">Status</p>
-                            <p class="text-primary font-medium">Open to work</p>
+                        <div class="bg-gray-50 dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/60 p-4 rounded-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Location</p>
+                                <p class="font-bold text-gray-900 dark:text-white">India</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-wrap gap-4 pt-4">
                         <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:shadow-lg transition-all">
-                            <i class="fab fa-github"></i>
+                            class="flex items-center justify-center gap-2 px-6 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 min-h-[48px]">
+                            <i class="fab fa-github text-lg"></i>
                             GitHub Profile
                         </a>
-                        <a href="#" class="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all">
+                        <!-- Actionable Resume PDF Download Button -->
+                        <a href="assets/Anuja_Awchar_Resume.pdf" download="Anuja_Awchar_Resume.pdf" target="_blank"
+                            title="Download Anuja's Resume PDF"
+                            class="flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-primary text-primary rounded-xl font-bold hover:bg-primary hover:text-white transition-all transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] shadow-sm">
                             <i class="fas fa-download"></i>
-                            Resume
+                            Download Resume
                         </a>
                     </div>
                 </div>
-                
-                <!-- Stats/Highlights instead of image -->
+
+                <!-- Highlight Stats Block -->
                 <div class="order-2 md:order-1">
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="bg-gradient-to-br from-primary to-purple-600 p-6 rounded-2xl text-white text-center">
-                            <i class="fas fa-graduation-cap text-3xl mb-3"></i>
-                            <p class="text-3xl font-bold">Student</p>
-                            <p class="text-sm opacity-90">Computer Science</p>
+                    <div class="grid grid-cols-2 gap-5 sm:gap-6">
+                        <div class="card-spotlight bg-gradient-to-br from-primary to-purple-700 p-6 sm:p-8 rounded-3xl text-white text-center shadow-xl transform transition-transform hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-coffee text-2xl"></i>
+                            </div>
+                            <p class="text-3xl sm:text-4xl font-extrabold mb-1">Java</p>
+                            <p class="text-xs sm:text-sm font-semibold opacity-90 tracking-wide uppercase">Primary Focus & OOP</p>
                         </div>
-                        <div class="bg-gradient-to-br from-green-500 to-teal-500 p-6 rounded-2xl text-white text-center">
-                            <i class="fas fa-project-diagram text-3xl mb-3"></i>
-                            <p class="text-3xl font-bold">11+</p>
-                            <p class="text-sm opacity-90">Projects</p>
+                        <div class="card-spotlight bg-gradient-to-br from-green-500 to-teal-600 p-6 sm:p-8 rounded-3xl text-white text-center shadow-xl transform transition-transform hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-project-diagram text-2xl"></i>
+                            </div>
+                            <p class="text-3xl sm:text-4xl font-extrabold mb-1">11+</p>
+                            <p class="text-xs sm:text-sm font-semibold opacity-90 tracking-wide uppercase">Completed Projects</p>
                         </div>
-                        <div class="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 rounded-2xl text-white text-center">
-                            <i class="fas fa-laptop-code text-3xl mb-3"></i>
-                            <p class="text-3xl font-bold">10+</p>
-                            <p class="text-sm opacity-90">Technologies</p>
+                        <div class="card-spotlight bg-gradient-to-br from-blue-600 to-indigo-700 p-6 sm:p-8 rounded-3xl text-white text-center shadow-xl transform transition-transform hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-layer-group text-2xl"></i>
+                            </div>
+                            <p class="text-3xl sm:text-4xl font-extrabold mb-1">10+</p>
+                            <p class="text-xs sm:text-sm font-semibold opacity-90 tracking-wide uppercase">Core Technologies</p>
                         </div>
-                        <div class="bg-gradient-to-br from-orange-500 to-red-500 p-6 rounded-2xl text-white text-center">
-                            <i class="fas fa-code-branch text-3xl mb-3"></i>
-                            <p class="text-3xl font-bold">11+</p>
-                            <p class="text-sm opacity-90">Repositories</p>
+                        <div class="card-spotlight bg-gradient-to-br from-orange-500 to-rose-600 p-6 sm:p-8 rounded-3xl text-white text-center shadow-xl transform transition-transform hover:-translate-y-1">
+                            <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code-branch text-2xl"></i>
+                            </div>
+                            <p class="text-3xl sm:text-4xl font-extrabold mb-1">100%</p>
+                            <p class="text-xs sm:text-sm font-semibold opacity-90 tracking-wide uppercase">Code Commitment</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Timeline Section -->
+    <section id="timeline" class="py-20 bg-gray-50 dark:bg-dark transition-colors relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Milestones</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">Education & Timeline</h2>
+                <p class="text-gray-600 dark:text-gray-400">My academic journey and technical milestones in Computer Science</p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative py-4">
+                <!-- Vertical Line -->
+                <div class="timeline-connector hidden md:block"></div>
+
+                <!-- Timeline Item 1: CS Degree -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="w-full md:w-5/12 order-2 md:order-1 md:text-right pr-0 md:pr-8 mt-4 md:mt-0">
+                        <div class="card-spotlight bg-white dark:bg-gray-800 p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700/60 hover:shadow-xl transition-all">
+                            <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-2">Academic Degree</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">B.Tech / B.E. in Computer Science Engineering</h3>
+                            <p class="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-3">Undergraduate Studies • Current Student</p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                                Immersed in foundational computer science principles. Specializing in **Object-Oriented Programming (OOP) using Java**, Database Architecture (RDBMS & SQL), Operating Systems, and Data Structures & Algorithms.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 justify-start md:justify-end">
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">Java OOP</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">DSA</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">DBMS & SQL</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">OS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Icon -->
+                    <div class="z-20 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-purple-600 text-white flex items-center justify-center shadow-lg border-4 border-white dark:border-dark order-1 md:order-2 flex-shrink-0">
+                        <i class="fas fa-graduation-cap text-lg"></i>
+                    </div>
+
+                    <div class="w-full md:w-5/12 order-3 hidden md:block"></div>
+                </div>
+
+                <!-- Timeline Item 2: Enterprise Java & Full Stack Development -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="w-full md:w-5/12 order-3 hidden md:block"></div>
+
+                    <!-- Center Icon -->
+                    <div class="z-20 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-teal-600 text-white flex items-center justify-center shadow-lg border-4 border-white dark:border-dark order-1 md:order-2 flex-shrink-0">
+                        <i class="fas fa-laptop-code text-lg"></i>
+                    </div>
+
+                    <div class="w-full md:w-5/12 order-2 md:order-3 md:text-left pl-0 md:pl-8 mt-4 md:mt-0">
+                        <div class="card-spotlight bg-white dark:bg-gray-800 p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700/60 hover:shadow-xl transition-all">
+                            <span class="inline-block px-3 py-1 bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-bold rounded-full mb-2">Hands-On Development</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Enterprise & Full Stack Project Architect</h3>
+                            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mb-3">2024 – Present • Portfolio & Open Source Work</p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                                Developed over 11 standalone applications. Architected secure, multi-tier **Core Java Swing + JDBC** desktop systems, built real-time online auctions using **Spring Boot + Hibernate + Firebase**, and crafted AI-driven web apps with **React & Node.js**.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">Spring Boot</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">Hibernate</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">Core Java</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: Open Source & Technical Mastery -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                    <div class="w-full md:w-5/12 order-2 md:order-1 md:text-right pr-0 md:pr-8 mt-4 md:mt-0">
+                        <div class="card-spotlight bg-white dark:bg-gray-800 p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700/60 hover:shadow-xl transition-all">
+                            <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold rounded-full mb-2">Continuous Innovation</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Open Source Contributor & UI/UX Designer</h3>
+                            <p class="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-3">GitHub Activity • Ongoing Mastery</p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                                Actively maintaining clean repositories with strong documentation. Passionate about writing modular, testable code, mastering microservices patterns in Java, and creating accessible, pixel-perfect user experiences.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 justify-start md:justify-end">
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">Git & GitHub</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">RESTful APIs</span>
+                                <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md font-medium">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Icon -->
+                    <div class="z-20 w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-rose-600 text-white flex items-center justify-center shadow-lg border-4 border-white dark:border-dark order-1 md:order-2 flex-shrink-0">
+                        <i class="fas fa-code-branch text-lg"></i>
+                    </div>
+
+                    <div class="w-full md:w-5/12 order-3 hidden md:block"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50 dark:bg-dark">
+    <section id="skills" class="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Skills & Expertise</h2>
-                <p class="text-gray-600 dark:text-gray-400">Technologies I work with</p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">Skills & Technologies</h2>
+                <p class="text-gray-600 dark:text-gray-400">My technical toolkit, prioritizing **Core Java, Spring Boot, & Enterprise Backend**</p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
             </div>
 
-            <!-- Tech Stack Tags -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Django</span>
-                <span class="tech-tag">Spring Boot</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">REST API</span>
-                <span class="tech-tag">Git</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">AWS</span>
+            <!-- Tech Stack Tags (Java prioritized) -->
+            <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-14 max-w-4xl mx-auto">
+                <span class="tech-tag border-primary/40 bg-primary/5 dark:bg-primary/10 text-primary font-bold"><i class="fas fa-coffee text-primary"></i> Java (Core & OOP)</span>
+                <span class="tech-tag border-green-500/40 bg-green-500/5 dark:bg-green-500/10 text-green-700 dark:text-green-400 font-bold"><i class="fas fa-leaf text-green-600"></i> Spring Boot</span>
+                <span class="tech-tag border-purple-500/40"><i class="fas fa-database text-purple-600"></i> Hibernate / ORM</span>
+                <span class="tech-tag"><i class="fas fa-plug"></i> JDBC</span>
+                <span class="tech-tag"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+                <span class="tech-tag"><i class="fas fa-server"></i> Microservices</span>
+                <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech-tag border-blue-500/40"><i class="fab fa-react text-blue-500"></i> React</span>
+                <span class="tech-tag"><i class="fab fa-node-js text-green-600"></i> Node.js</span>
+                <span class="tech-tag"><i class="fab fa-js text-yellow-500"></i> JavaScript (ES6+)</span>
+                <span class="tech-tag"><i class="fas fa-code text-blue-600"></i> TypeScript</span>
+                <span class="tech-tag"><i class="fab fa-python text-yellow-600"></i> Python</span>
+                <span class="tech-tag"><i class="fas fa-fire text-orange-600"></i> Django</span>
+                <span class="tech-tag"><i class="fas fa-wind text-cyan-500"></i> Tailwind CSS</span>
+                <span class="tech-tag"><i class="fas fa-database text-green-700"></i> PostgreSQL</span>
+                <span class="tech-tag"><i class="fas fa-database text-green-600"></i> MongoDB</span>
+                <span class="tech-tag"><i class="fab fa-git-alt text-orange-600"></i> Git & GitHub</span>
+                <span class="tech-tag"><i class="fab fa-docker text-blue-500"></i> Docker</span>
+                <span class="tech-tag"><i class="fab fa-aws text-yellow-600"></i> AWS Cloud</span>
             </div>
 
-            <!-- Skill Cards -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Frontend -->
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+            <!-- 4 Categorized Skill Cards (Spotlight enabled) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Core Java & Enterprise Backend (Priority Card) -->
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800/90 rounded-3xl p-6 sm:p-7 shadow-lg border border-primary/20 hover:border-primary/50 transition-all">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-purple-600 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                        <i class="fas fa-coffee text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2 flex items-center justify-between">
+                        Java Ecosystem
+                        <span class="text-xs bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-bold">Top Strength</span>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-5 leading-relaxed">
+                        Architecting enterprise applications with clean object-oriented design and robust database access.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Core Java</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Spring Boot</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Hibernate ORM</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">JDBC & Swing</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Maven & JUnit</span>
+                    </div>
+                </div>
+
+                <!-- Frontend & UI/UX -->
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800/90 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-200/80 dark:border-gray-700 hover:border-blue-500/50 transition-all">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-5 shadow-md">
                         <i class="fas fa-laptop-code text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Frontend</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Building responsive & interactive interfaces</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">React</span>
-                        <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Vue.js</span>
-                        <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">HTML/CSS</span>
-                        <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Tailwind</span>
+                    <h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2">Frontend & UI/UX</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-5 leading-relaxed">
+                        Crafting highly responsive, interactive web interfaces with modern single-page frameworks.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">React.js</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">TypeScript</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Tailwind CSS</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">HTML5 / CSS3</span>
                     </div>
                 </div>
 
-                <!-- Backend -->
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-server text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Backend</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Creating robust server-side applications</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Node.js</span>
-                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Python</span>
-                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Java</span>
-                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Django</span>
-                    </div>
-                </div>
-
-                <!-- Database -->
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                <!-- Backend & Databases -->
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800/90 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-200/80 dark:border-gray-700 hover:border-green-500/50 transition-all">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-5 shadow-md">
                         <i class="fas fa-database text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Database</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Designing & optimizing data storage</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">MongoDB</span>
-                        <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">PostgreSQL</span>
-                        <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">MySQL</span>
-                        <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">Firebase</span>
+                    <h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2">Backend & Databases</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-5 leading-relaxed">
+                        Designing secure REST APIs, microservice architectures, and relational/NoSQL data schemas.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">MySQL & RDBMS</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Node.js / Express</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Python / Django</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">PostgreSQL</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">MongoDB</span>
                     </div>
                 </div>
 
-                <!-- Tools -->
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
+                <!-- Cloud & DevOps Tools -->
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800/90 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-200/80 dark:border-gray-700 hover:border-orange-500/50 transition-all">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-rose-500 rounded-2xl flex items-center justify-center mb-5 shadow-md">
                         <i class="fas fa-tools text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Tools</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Development & deployment tools</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-2 py-1 rounded">Git</span>
-                        <span class="text-xs bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-2 py-1 rounded">Docker</span>
-                        <span class="text-xs bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-2 py-1 rounded">AWS</span>
-                        <span class="text-xs bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-2 py-1 rounded">Vercel</span>
+                    <h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2">DevOps & Tools</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-5 leading-relaxed">
+                        Streamlining development workflows with version control, containerization, and cloud deployment.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Git & GitHub</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Docker</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">AWS Cloud</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Vercel & Netlify</span>
+                        <span class="text-xs bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 px-2.5 py-1 rounded-lg font-semibold shadow-2xs">Postman API</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Progress Bars -->
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-900 dark:text-white font-semibold">React / React Native</span>
-                            <span class="text-primary font-medium">95%</span>
+            <!-- Proficiency Progress Bars (Java Top Priority) -->
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mt-16 max-w-5xl mx-auto">
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-900 dark:text-white font-bold flex items-center gap-2">
+                                <i class="fas fa-coffee text-primary"></i> Core Java & OOP (Collections, Multithreading, JDBC)
+                            </span>
+                            <span class="text-primary font-extrabold text-sm">95%</span>
                         </div>
-                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-500 h-2.5 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-900 dark:text-white font-semibold">Node.js / Express</span>
-                            <span class="text-primary font-medium">90%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-500 h-2.5 rounded-full" style="width: 90%"></div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 p-0.5 shadow-inner">
+                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-600 h-2 rounded-full shadow-sm" style="width: 95%"></div>
                         </div>
                     </div>
 
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-900 dark:text-white font-semibold">Python / Django</span>
-                            <span class="text-primary font-medium">85%</span>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-900 dark:text-white font-bold flex items-center gap-2">
+                                <i class="fas fa-leaf text-green-600"></i> Spring Boot & Hibernate ORM APIs
+                            </span>
+                            <span class="text-green-600 dark:text-green-400 font-extrabold text-sm">90%</span>
                         </div>
-                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-500 h-2.5 rounded-full" style="width: 85%"></div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 p-0.5 shadow-inner">
+                            <div class="skill-bar bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full shadow-sm" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-900 dark:text-white font-bold flex items-center gap-2">
+                                <i class="fab fa-react text-blue-500"></i> React.js & Single Page Applications
+                            </span>
+                            <span class="text-blue-600 dark:text-blue-400 font-extrabold text-sm">92%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 p-0.5 shadow-inner">
+                            <div class="skill-bar bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full shadow-sm" style="width: 92%"></div>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-900 dark:text-white font-semibold">Java / Spring Boot</span>
-                            <span class="text-primary font-medium">82%</span>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-900 dark:text-white font-bold flex items-center gap-2">
+                                <i class="fas fa-database text-purple-600"></i> Database Architecture (MySQL, RDBMS, SQL)
+                            </span>
+                            <span class="text-purple-600 dark:text-purple-400 font-extrabold text-sm">90%</span>
                         </div>
-                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-500 h-2.5 rounded-full" style="width: 82%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-900 dark:text-white font-semibold">JavaScript / TypeScript</span>
-                            <span class="text-primary font-medium">92%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-500 h-2.5 rounded-full" style="width: 92%"></div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 p-0.5 shadow-inner">
+                            <div class="skill-bar bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full shadow-sm" style="width: 90%"></div>
                         </div>
                     </div>
 
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-900 dark:text-white font-semibold">UI/UX Design</span>
-                            <span class="text-primary font-medium">80%</span>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-900 dark:text-white font-bold flex items-center gap-2">
+                                <i class="fab fa-js text-yellow-500"></i> JavaScript / TypeScript Programming
+                            </span>
+                            <span class="text-yellow-600 dark:text-yellow-400 font-extrabold text-sm">92%</span>
                         </div>
-                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-gradient-to-r from-primary to-purple-500 h-2.5 rounded-full" style="width: 80%"></div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 p-0.5 shadow-inner">
+                            <div class="skill-bar bg-gradient-to-r from-yellow-500 to-orange-500 h-2 rounded-full shadow-sm" style="width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-900 dark:text-white font-bold flex items-center gap-2">
+                                <i class="fas fa-paint-brush text-rose-500"></i> UI/UX Design & Responsive Architecture
+                            </span>
+                            <span class="text-rose-600 dark:text-rose-400 font-extrabold text-sm">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 p-0.5 shadow-inner">
+                            <div class="skill-bar bg-gradient-to-r from-rose-500 to-red-500 h-2 rounded-full shadow-sm" style="width: 85%"></div>
                         </div>
                     </div>
                 </div>
@@ -422,325 +611,507 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-dark transition-colors relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
-                <p class="text-gray-600 dark:text-gray-400">A showcase of my recent work from GitHub</p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Portfolio Showcase</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">Featured Projects</h2>
+                <p class="text-gray-600 dark:text-gray-400">Explore my top applications across **Core Java, Spring Boot**, and Full Stack Web</p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
             </div>
 
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="project-filter px-5 py-2 rounded-full bg-gradient-to-r from-primary to-purple-600 text-white font-medium transition-all hover:shadow-lg hover:shadow-primary/30" data-filter="all">All</button>
-                <button class="project-filter px-5 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium hover:bg-primary hover:text-white transition-all" data-filter="react">React</button>
-                <button class="project-filter px-5 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium hover:bg-primary hover:text-white transition-all" data-filter="javascript">JavaScript</button>
-                <button class="project-filter px-5 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium hover:bg-primary hover:text-white transition-all" data-filter="fullstack">Full Stack</button>
-                <button class="project-filter px-5 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium hover:bg-primary hover:text-white transition-all" data-filter="python">Python</button>
+            <!-- Filter Buttons (Java & Spring Boot positioned first) -->
+            <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12">
+                <button
+                    class="project-filter active px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-purple-600 text-white font-bold text-sm shadow-md transition-all"
+                    data-filter="all">All Projects (10)</button>
+                <button
+                    class="project-filter px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-primary hover:text-primary transition-all flex items-center gap-1.5"
+                    data-filter="java"><i class="fas fa-coffee text-primary"></i> Core Java</button>
+                <button
+                    class="project-filter px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-green-500 hover:text-green-600 transition-all flex items-center gap-1.5"
+                    data-filter="springboot"><i class="fas fa-leaf text-green-500"></i> Spring Boot</button>
+                <button
+                    class="project-filter px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-purple-500 hover:text-purple-600 transition-all"
+                    data-filter="fullstack">Full Stack</button>
+                <button
+                    class="project-filter px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-blue-500 hover:text-blue-600 transition-all"
+                    data-filter="react">React</button>
+                <button
+                    class="project-filter px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-bold text-sm hover:border-yellow-500 hover:text-yellow-600 transition-all"
+                    data-filter="python">Python</button>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
-                <!-- Project 1: AarogyaAI Chatbot -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="react,fullstack,javascript">
-                    <div class="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                        <i class="fas fa-heartbeat text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">React</span>
+            <!-- Project Slider Wrapper -->
+            <div class="relative max-w-7xl mx-auto px-1 sm:px-4 md:px-16 mt-8">
+                <!-- Navigation Arrows (Desktop) -->
+                <button id="prevProjectBtn" aria-label="Previous projects"
+                    class="hidden md:flex absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white dark:bg-gray-800 items-center justify-center shadow-lg border border-gray-200 dark:border-gray-700 hover:bg-gradient-to-r hover:from-primary hover:to-purple-600 hover:text-white dark:hover:from-primary dark:hover:to-purple-600 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300 font-bold cursor-pointer focus:outline-none">
+                    <i class="fas fa-chevron-left text-lg"></i>
+                </button>
+
+                <!-- Carousel Viewport -->
+                <div class="overflow-hidden py-4" id="projectsCarouselContainer">
+                    <!-- Slider Track -->
+                    <div class="flex transition-transform duration-500 ease-in-out gap-6 sm:gap-8" id="projectsSliderTrack">
+                        
+                        <!-- Project 1 (Priority Core Java): E-Learning Platform -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="java,fullstack">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-indigo-600 via-purple-600 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-graduation-cap text-6xl sm:text-7xl text-white/35 transform -rotate-6 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-primary text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Core Java</span>
+                                        <span class="bg-black/40 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">MySQL JDBC</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">E-Learning Platform</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Comprehensive desktop e-learning application featuring course modules, video lectures, student assignments, dynamic quizzes, progress tracking, and certificate generation. Implements strict role-based access control (RBAC) and **MySQL JDBC** persistence.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-800/50 px-2.5 py-1 rounded-lg font-semibold">Java Swing</span>
+                                        <span class="text-xs bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-800/50 px-2.5 py-1 rounded-lg font-semibold">JDBC Driver</span>
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">MySQL</span>
+                                        <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-lg font-semibold">OOP Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/e-learning-platform" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">Desktop App</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">AarogyaAI Chatbot</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            An intelligent healthcare assistant built with React + Tailwind CSS. Provides AI-powered health guidance, symptom insights, and clinic suggestions.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">React</span>
-                            <span class="text-xs bg-cyan-100 dark:bg-cyan-900 text-cyan-700 dark:text-cyan-300 px-2 py-1 rounded">Tailwind</span>
-                            <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">AI</span>
+
+                        <!-- Project 2 (Priority Core Java): Forensic Face Sketch Construction & Recognition -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="java">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-slate-800 via-indigo-950 to-gray-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-blue-500/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-fingerprint text-6xl sm:text-7xl text-white/35 transform rotate-6 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-primary text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Core Java</span>
+                                        <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Forensic GUI</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">Forensic Face Sketch Construction & Recognition</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        An advanced forensic investigation desktop system engineered with **Java Swing & JDBC**. Manages suspect database records, composite sketch assembly workflows, and rapid sketch matching algorithms with intuitive visual tools.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-800/50 px-2.5 py-1 rounded-lg font-semibold">Java Swing</span>
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">JDBC API</span>
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">MySQL Database</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/forensic-face-sketch-construction" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">Desktop System</span>
+                            </div>
                         </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://aarogyaai-chatbot.vercel.app" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/anuja-awchar/aarogyaai-chatbot" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
+
+                        <!-- Project 3 (Priority Spring Boot): Online Auction Platform -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="java,springboot,fullstack">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-violet-600 via-purple-700 to-indigo-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-gavel text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Spring Boot</span>
+                                        <span class="bg-black/40 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Hibernate ORM</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">Online Auction Platform</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Enterprise backend platform built with **Java, Spring Boot, & Hibernate ORM**. Delivers secure RESTful CRUD APIs, real-time bid synchronization via **Firebase**, item listing management, and automated transaction logs.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">Spring Boot</span>
+                                        <span class="text-xs bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-800/50 px-2.5 py-1 rounded-lg font-semibold">Hibernate ORM</span>
+                                        <span class="text-xs bg-yellow-50 dark:bg-yellow-950/80 text-yellow-700 dark:text-yellow-300 border border-yellow-200/50 dark:border-yellow-800/50 px-2.5 py-1 rounded-lg font-semibold">Firebase Realtime</span>
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">REST API</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/online-auction-platform" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-green-600 dark:text-green-400 font-bold">Backend Architecture</span>
+                            </div>
                         </div>
+
+                        <!-- Project 4 (Priority Core Java): ATM Simulator -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="java">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-teal-600 via-cyan-700 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-credit-card text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-primary text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Core Java</span>
+                                        <span class="bg-teal-700 text-white text-xs px-3 py-1 rounded-full font-semibold">OOP Practice</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">ATM Simulator System</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Object-oriented banking simulation built entirely in **Core Java**. Implements secure PIN authentication, multi-account balance checking, cash withdrawal verification, deposits, and transaction receipts.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-800/50 px-2.5 py-1 rounded-lg font-semibold">Core Java</span>
+                                        <span class="text-xs bg-teal-50 dark:bg-teal-950/80 text-teal-700 dark:text-teal-300 border border-teal-200/50 dark:border-teal-800/50 px-2.5 py-1 rounded-lg font-semibold">OOP Encapsulation</span>
+                                        <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-lg font-semibold">Exception Handling</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/atm-simulator" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">OOP Demo</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: AarogyaAI Chatbot -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="react,fullstack,javascript">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-800 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-heartbeat text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">React</span>
+                                        <span class="bg-purple-600 text-white text-xs px-3 py-1 rounded-full font-semibold">AI Assistant</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">AarogyaAI Healthcare Chatbot</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        An intelligent healthcare web application crafted with **React & Tailwind CSS**. Offers conversational AI symptom triage, health education guidance, emergency clinic suggestions, and a sleek dark mode UI.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">React.js</span>
+                                        <span class="text-xs bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200/50 dark:border-cyan-800/50 px-2.5 py-1 rounded-lg font-semibold">Tailwind CSS</span>
+                                        <span class="text-xs bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-800/50 px-2.5 py-1 rounded-lg font-semibold">AI API</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <a href="https://aarogyaai-chatbot.vercel.app" target="_blank" rel="noopener noreferrer"
+                                        class="flex items-center gap-1.5 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/anuja-awchar/aarogyaai-chatbot" target="_blank" rel="noopener noreferrer"
+                                        class="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-semibold text-sm transition-colors">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                                <span class="text-xs text-blue-500 font-bold">Vercel Deploy</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: AI Job Tracker -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="javascript,fullstack">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-emerald-600 via-teal-600 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-briefcase text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Node.js</span>
+                                        <span class="bg-yellow-500 text-gray-900 text-xs px-3 py-1 rounded-full font-bold">AI Resume Match</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">AI-Powered Job Tracker</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Full-stack job application tracker that aggregates external API listings, uses AI to evaluate resume compatibility against job descriptions, and provides an integrated career advice chat assistant.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-yellow-50 dark:bg-yellow-950/80 text-yellow-700 dark:text-yellow-300 border border-yellow-200/50 dark:border-yellow-800/50 px-2.5 py-1 rounded-lg font-semibold">JavaScript ES6</span>
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">Node.js</span>
+                                        <span class="text-xs bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-800/50 px-2.5 py-1 rounded-lg font-semibold">AI Matching</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/ai-powered-job-tracker" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">Full Stack App</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: College Administration System -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="python,fullstack">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-indigo-600 via-blue-600 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-university text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Django REST</span>
+                                        <span class="bg-cyan-600 text-white text-xs px-3 py-1 rounded-full font-semibold">React.js</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">Paperless College Administration System</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Automated university portal built with **Django REST Framework & React.js**. Manages digital student enrollment, course registration, paperless attendance logging, and faculty grade management.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">Python / Django</span>
+                                        <span class="text-xs bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200/50 dark:border-cyan-800/50 px-2.5 py-1 rounded-lg font-semibold">React.js</span>
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">REST API</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/automated-paperless-college-system" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">Full Stack ERP</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: Event Feedback System -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="javascript,fullstack">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-pink-600 via-rose-600 to-purple-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-calendar-check text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Express.js</span>
+                                        <span class="bg-purple-600 text-white text-xs px-3 py-1 rounded-full font-semibold">PostgreSQL</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">Event Feedback Management System</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Full-stack feedback analytics platform powered by **Node.js, Express, & PostgreSQL**. Enables real-time attendee survey collection, sentiment breakdown, and structured database exports for organizers.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">Node.js</span>
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">Express.js</span>
+                                        <span class="text-xs bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-800/50 px-2.5 py-1 rounded-lg font-semibold">PostgreSQL SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/event-feedback-system" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">Relational DB App</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 9: Internshala Clone -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="javascript,react">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-orange-500 via-red-600 to-slate-900 flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-search-dollar text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-yellow-500 text-gray-900 text-xs px-3 py-1 rounded-full font-bold shadow-sm">JavaScript</span>
+                                        <span class="bg-cyan-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Tailwind UI</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">Internshala Responsive Clone</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        A pixel-perfect, highly responsive web application inspired by Internshala. Showcases dynamic internship filtering, interactive application drawers, and clean mobile-first UI architecture.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-yellow-50 dark:bg-yellow-950/80 text-yellow-700 dark:text-yellow-300 border border-yellow-200/50 dark:border-yellow-800/50 px-2.5 py-1 rounded-lg font-semibold">JavaScript</span>
+                                        <span class="text-xs bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-300 border border-cyan-200/50 dark:border-cyan-800/50 px-2.5 py-1 rounded-lg font-semibold">Tailwind CSS</span>
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">Vercel</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <a href="https://intershalaweb.vercel.app" target="_blank" rel="noopener noreferrer"
+                                        class="flex items-center gap-1.5 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/anuja-awchar/intershalaweb" target="_blank" rel="noopener noreferrer"
+                                        class="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-semibold text-sm transition-colors">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                                <span class="text-xs text-orange-500 font-bold">Live UI</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 10: Web Scraping Project -->
+                        <div class="project-card card-spotlight bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700/80 flex flex-col justify-between"
+                            data-tech="python">
+                            <div>
+                                <div class="relative h-48 sm:h-52 bg-gradient-to-br from-gray-700 via-slate-800 to-black flex items-center justify-center p-6 overflow-hidden">
+                                    <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-2xl"></div>
+                                    <i class="fas fa-robot text-6xl sm:text-7xl text-white/35 transition-transform duration-500 group-hover:scale-110"></i>
+                                    <div class="absolute top-4 left-4 flex gap-2">
+                                        <span class="bg-yellow-500 text-gray-900 text-xs px-3 py-1 rounded-full font-bold shadow-sm">Python</span>
+                                        <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Selenium Automation</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 sm:p-7">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-snug">Automated Web Scraping Engine</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-5 leading-relaxed">
+                                        Python data extraction pipeline utilizing **Selenium WebDriver**. Handles dynamic multi-page pagination, automated data cleaning, JSON export, and batch insertion into **MySQL** relational tables.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-6">
+                                        <span class="text-xs bg-yellow-50 dark:bg-yellow-950/80 text-yellow-700 dark:text-yellow-300 border border-yellow-200/50 dark:border-yellow-800/50 px-2.5 py-1 rounded-lg font-semibold">Python 3</span>
+                                        <span class="text-xs bg-green-50 dark:bg-green-950/80 text-green-700 dark:text-green-300 border border-green-200/50 dark:border-green-800/50 px-2.5 py-1 rounded-lg font-semibold">Selenium</span>
+                                        <span class="text-xs bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50 px-2.5 py-1 rounded-lg font-semibold">MySQL ETL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 sm:px-7 pb-6 pt-4 border-t border-gray-100 dark:border-gray-700/80 flex items-center justify-between">
+                                <a href="https://github.com/anuja-awchar/selenium-web-scraping-project" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-2 text-primary hover:text-purple-600 font-bold text-sm transition-colors">
+                                    <i class="fab fa-github text-base"></i> View Source Code
+                                </a>
+                                <span class="text-xs text-gray-400 font-medium">Data Pipeline</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Project 2: AI Job Tracker -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="javascript,fullstack">
-                    <div class="relative h-48 bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center">
-                        <i class="fas fa-briefcase text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">AI</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">AI Job Tracker</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            AI-powered job tracking platform that fetches jobs from external APIs, intelligently matches them with user's resume using AI, and provides an AI chat assistant.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 px-2 py-1 rounded">JavaScript</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Node.js</span>
-                            <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">AI</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://github.com/anuja-awchar/ai-powered-job-tracker" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Navigation Arrows (Desktop Right) -->
+                <button id="nextProjectBtn" aria-label="Next projects"
+                    class="hidden md:flex absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white dark:bg-gray-800 items-center justify-center shadow-lg border border-gray-200 dark:border-gray-700 hover:bg-gradient-to-r hover:from-primary hover:to-purple-600 hover:text-white dark:hover:from-primary dark:hover:to-purple-600 dark:hover:text-white transition-all text-gray-700 dark:text-gray-300 font-bold cursor-pointer focus:outline-none">
+                    <i class="fas fa-chevron-right text-lg"></i>
+                </button>
 
-                <!-- Project 3: Automated Paperless College System -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="python,fullstack">
-                    <div class="relative h-48 bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center">
-                        <i class="fas fa-university text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Full Stack</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">College Administration System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            A full-stack college administration system built using Django REST Framework and React.js. Features include student management, attendance tracking, and more.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Django</span>
-                            <span class="text-xs bg-cyan-100 dark:bg-cyan-900 text-cyan-700 dark:text-cyan-300 px-2 py-1 rounded">React</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">REST API</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://github.com/anuja-awchar/automated-paperless-college-system" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Event Feedback System -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="javascript,fullstack">
-                    <div class="relative h-48 bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
-                        <i class="fas fa-calendar-check text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Event Feedback System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            Full Stack Event Feedback Management System - Collects and manages event feedback with Node.js, Express, and PostgreSQL.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Node.js</span>
-                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Express</span>
-                            <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">PostgreSQL</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://github.com/anuja-awchar/event-feedback-system" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: Internshala Web Clone -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="javascript,react">
-                    <div class="relative h-48 bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
-                        <i class="fas fa-graduation-cap text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">JavaScript</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Internshala Clone</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            A responsive web application inspired by Internshala, designed to showcase internship listings with a clean UI and user-friendly navigation.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 px-2 py-1 rounded">JavaScript</span>
-                            <span class="text-xs bg-cyan-100 dark:bg-cyan-900 text-cyan-700 dark:text-cyan-300 px-2 py-1 rounded">Tailwind</span>
-                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">Vercel</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://intershalaweb.vercel.app" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/anuja-awchar/intershalaweb" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Online Auction Platform -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="java,fullstack">
-                    <div class="relative h-48 bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center">
-                        <i class="fas fa-gavel text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Java</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Online Auction Platform</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            A secure Online Auction Platform built using Java, Spring Boot, and Hibernate, featuring RESTful CRUD APIs and real-time bid updates using Firebase.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 px-2 py-1 rounded">Java</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Spring Boot</span>
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 px-2 py-1 rounded">Firebase</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://github.com/anuja-awchar/online-auction-platform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7: ATM Simulator -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="java">
-                    <div class="relative h-48 bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center">
-                        <i class="fas fa-credit-card text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Java</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ATM Simulator</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            Java-based ATM project for learning basic banking functionalities like withdraw, deposit, and check balance.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 px-2 py-1 rounded">Java</span>
-                            <span class="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded">OOP</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://github.com/anuja-awchar/atm-simulator" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8: Selenium Web Scraping -->
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2" data-tech="python">
-                    <div class="relative h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                        <i class="fas fa-robot text-6xl text-white/30"></i>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Python</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Web Scraping Project</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            A Python web scraping project using Selenium to extract data from websites. Supports pagination, JSON/text file export, and MySQL database storage.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 px-2 py-1 rounded">Python</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-1 rounded">Selenium</span>
-                            <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">MySQL</span>
-                        </div>
-                        <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <a href="https://github.com/anuja-awchar/selenium-web-scraping-project" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-purple-600 font-medium text-sm">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                        </div>
-                    </div>
+                <!-- Mobile Navigation Controls -->
+                <div class="flex justify-center items-center gap-6 mt-8 md:hidden">
+                    <button id="prevProjectBtnMobile" aria-label="Previous projects"
+                        class="w-12 h-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-md border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 active:bg-primary active:text-white focus:outline-none">
+                        <i class="fas fa-chevron-left text-base"></i>
+                    </button>
+                    <span class="text-xs font-semibold text-gray-400">Swipe or Click</span>
+                    <button id="nextProjectBtnMobile" aria-label="Next projects"
+                        class="w-12 h-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-md border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 active:bg-primary active:text-white focus:outline-none">
+                        <i class="fas fa-chevron-right text-base"></i>
+                    </button>
                 </div>
             </div>
 
             <!-- View More Button -->
-            <div class="text-center mt-12">
+            <div class="text-center mt-14">
                 <a href="https://github.com/anuja-awchar?tab=repositories" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:shadow-lg transition-all">
-                    <i class="fab fa-github"></i>
-                    View All Projects on GitHub
+                    class="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95 min-h-[48px]">
+                    <i class="fab fa-github text-lg"></i>
+                    Explore All 11+ Repositories on GitHub
                 </a>
             </div>
         </div>
     </section>
 
     <!-- GitHub Stats Section -->
-    <section id="github" class="py-20 bg-gray-50 dark:bg-dark">
+    <section id="github" class="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">GitHub Stats</h2>
-                <p class="text-gray-600 dark:text-gray-400">My open source contributions</p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Contributions</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">GitHub Stats & Activity</h2>
+                <p class="text-gray-600 dark:text-gray-400">My open source commitment and daily coding discipline</p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <!-- Stats Cards -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-100 dark:border-gray-700/60 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
                         <i class="fas fa-code text-white text-2xl"></i>
                     </div>
-                    <p class="text-4xl font-bold text-gray-900 dark:text-white mb-2">11+</p>
-                    <p class="text-gray-600 dark:text-gray-400">Repositories</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white mb-1">11+</p>
+                    <p class="text-sm font-semibold text-gray-600 dark:text-gray-400">Public Repositories</p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-100 dark:border-gray-700/60 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
                         <i class="fas fa-code-branch text-white text-2xl"></i>
                     </div>
-                    <p class="text-4xl font-bold text-gray-900 dark:text-white mb-2">50+</p>
-                    <p class="text-gray-600 dark:text-gray-400">Total Commits</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white mb-1">50+</p>
+                    <p class="text-sm font-semibold text-gray-600 dark:text-gray-400">Total Commits</p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-white text-2xl"></i>
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-100 dark:border-gray-700/60 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <i class="fas fa-coffee text-white text-2xl"></i>
                     </div>
-                    <p class="text-4xl font-bold text-gray-900 dark:text-white mb-2">5+</p>
-                    <p class="text-gray-600 dark:text-gray-400">Contributors</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white mb-1">4+</p>
+                    <p class="text-sm font-semibold text-gray-600 dark:text-gray-400">Core Java Applications</p>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-star text-white text-2xl"></i>
+                <div class="card-spotlight bg-gray-50 dark:bg-gray-800 rounded-3xl p-6 sm:p-7 shadow-lg border border-gray-100 dark:border-gray-700/60 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <i class="fas fa-fire text-white text-2xl"></i>
                     </div>
-                    <p class="text-4xl font-bold text-gray-900 dark:text-white mb-2">0</p>
-                    <p class="text-gray-600 dark:text-gray-400">Total Stars</p>
+                    <p class="text-4xl font-extrabold text-gray-900 dark:text-white mb-1">100%</p>
+                    <p class="text-sm font-semibold text-gray-600 dark:text-gray-400">Open Source Commitment</p>
                 </div>
             </div>
 
-            <!-- GitHub Activity -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <!-- GitHub Activity Card -->
+            <div class="card-spotlight bg-gray-50 dark:bg-gray-800 rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100 dark:border-gray-700/60 max-w-4xl mx-auto">
+                <h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-6 flex items-center gap-2.5">
                     <i class="fas fa-calendar-alt text-primary"></i>
-                    Recent Activity
+                    Recent Repository Highlights
                 </h3>
                 <div class="space-y-4">
-                    <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                        <div class="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-code text-green-600"></i>
+                    <div class="flex items-start gap-4 p-4 sm:p-5 bg-white dark:bg-gray-700/60 rounded-2xl border border-gray-100 dark:border-gray-600/50 shadow-2xs">
+                        <div class="w-11 h-11 bg-indigo-100 dark:bg-indigo-900/60 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-coffee text-primary"></i>
                         </div>
                         <div>
-                            <p class="font-medium text-gray-900 dark:text-white">Pushed code to aarogyaai-chatbot</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">2 days ago</p>
+                            <p class="font-bold text-gray-900 dark:text-white">E-Learning & Forensic Face Sketch Java Applications</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Maintained robust desktop object-oriented structures with MySQL JDBC connections.</p>
+                            <span class="text-xs text-gray-400 mt-2 block font-medium">Core Java • MySQL</span>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                        <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-star text-purple-600"></i>
+                    <div class="flex items-start gap-4 p-4 sm:p-5 bg-white dark:bg-gray-700/60 rounded-2xl border border-gray-100 dark:border-gray-600/50 shadow-2xs">
+                        <div class="w-11 h-11 bg-green-100 dark:bg-green-900/60 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-leaf text-green-600"></i>
                         </div>
                         <div>
-                            <p class="font-medium text-gray-900 dark:text-white">Starred repositories</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">1 week ago</p>
+                            <p class="font-bold text-gray-900 dark:text-white">Online Auction Platform Backend Architecture</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Designed enterprise REST APIs with Spring Boot, Hibernate ORM, and Firebase realtime state.</p>
+                            <span class="text-xs text-gray-400 mt-2 block font-medium">Spring Boot • Hibernate</span>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                        <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-folder-open text-blue-600"></i>
+                    <div class="flex items-start gap-4 p-4 sm:p-5 bg-white dark:bg-gray-700/60 rounded-2xl border border-gray-100 dark:border-gray-600/50 shadow-2xs">
+                        <div class="w-11 h-11 bg-blue-100 dark:bg-blue-900/60 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fab fa-react text-blue-500"></i>
                         </div>
                         <div>
-                            <p class="font-medium text-gray-900 dark:text-white">Created event-feedback-system</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">2 weeks ago</p>
+                            <p class="font-bold text-gray-900 dark:text-white">AarogyaAI & AI Job Tracker Full Stack Web Apps</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Pushed clean responsive React/Tailwind interfaces integrated with AI-driven endpoints.</p>
+                            <span class="text-xs text-gray-400 mt-2 block font-medium">React • Tailwind CSS • Vercel</span>
                         </div>
                     </div>
                 </div>
@@ -749,177 +1120,189 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-dark transition-colors">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
-                <p class="text-gray-600 dark:text-gray-400">I'd love to hear about your next project</p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Connect</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1 mb-4">Get In Touch</h2>
+                <p class="text-gray-600 dark:text-gray-400">I am actively open for Java Developer, Backend, and Full Stack roles</p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-2 gap-10 sm:gap-12">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Let's Connect</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Let's Talk About Your Next Opportunity</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Whether you are hiring for enterprise Java teams, full-stack web roles, or have a question about my projects, feel free to reach out. I respond within 24 hours.
+                    </p>
 
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-purple-500 rounded-xl flex items-center justify-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-2xl flex items-center justify-center shadow-md flex-shrink-0">
                                 <i class="fas fa-envelope text-white"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white">Email</h4>
-                                <p class="text-gray-600 dark:text-gray-400">anujaawchar@gmail.com</p>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-sm">Email Address</h4>
+                                <a href="mailto:anujaawchar@gmail.com" class="text-primary hover:underline font-semibold break-all">anujaawchar@gmail.com</a>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-md flex-shrink-0">
                                 <i class="fas fa-map-marker-alt text-white"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white">Location</h4>
-                                <p class="text-gray-600 dark:text-gray-400">India</p>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-sm">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400 font-semibold">India</p>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-md flex-shrink-0">
                                 <i class="fas fa-briefcase text-white"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white">Availability</h4>
-                                <p class="text-green-600 font-medium">Open to work</p>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-sm">Role Availability</h4>
+                                <p class="text-green-600 dark:text-green-400 font-bold">Available Immediately</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8">
-                        <h4 class="font-semibold mb-4 text-gray-900 dark:text-white">Follow Me</h4>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer" 
-                               class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all">
+                    <div class="mt-10 pt-8 border-t border-gray-200 dark:border-gray-800">
+                        <h4 class="font-bold mb-4 text-gray-900 dark:text-white text-sm uppercase tracking-wider">Social Channels</h4>
+                        <div class="flex gap-3 sm:gap-4">
+                            <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer"
+                                class="w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all shadow-sm active:scale-95">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
-                            <a href="https://linkedin.com/in/anujaawchar" target="_blank" rel="noopener noreferrer" 
-                               class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all">
+                            <a href="https://linkedin.com/in/anujaawchar" target="_blank" rel="noopener noreferrer"
+                                class="w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-[#0077b5] hover:text-white transition-all shadow-sm active:scale-95">
                                 <i class="fab fa-linkedin-in text-xl"></i>
                             </a>
-                            
-                            <a href="https://instagram.com/anujaawchar" target="_blank" rel="noopener noreferrer" 
-                               class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </a>
+
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <form id="contactForm" class="space-y-6">
+                <div class="card-spotlight bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700/60">
+                    <form id="contactForm" class="space-y-5">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white transition-all">
+                            <label for="name" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="e.g. Recruiter Name / Hiring Team"
+                                class="w-full px-4 py-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white transition-all text-sm font-medium">
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white transition-all">
+                            <label for="email" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="e.g. name@company.com"
+                                class="w-full px-4 py-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white transition-all text-sm font-medium">
                         </div>
 
                         <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject" required
-                                class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white transition-all">
+                            <label for="subject" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="e.g. Java Developer Opportunity"
+                                class="w-full px-4 py-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white transition-all text-sm font-medium">
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white transition-all"></textarea>
+                            <label for="message" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tell me about the role or project requirements..."
+                                class="w-full px-4 py-3.5 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white transition-all text-sm font-medium"></textarea>
                         </div>
 
                         <button type="submit"
-                            class="w-full bg-gradient-to-r from-primary to-purple-600 text-white py-3 px-6 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all font-semibold">
-                            <i class="fas fa-paper-plane mr-2"></i>
+                            class="w-full bg-gradient-to-r from-primary to-purple-600 text-white py-4 px-6 rounded-2xl hover:shadow-lg hover:shadow-primary/30 transition-all font-bold flex items-center justify-center gap-2 active:scale-95 min-h-[48px]">
+                            <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
                     </form>
 
-                    <div id="formStatus" class="mt-4 text-center hidden"></div>
+                    <div id="formStatus" class="mt-4 text-center hidden font-bold text-sm"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-14 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-10">
                 <!-- Brand -->
                 <div>
-                    <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        Anuja.dev
+                    <a href="#home" class="text-2xl font-extrabold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent flex items-center gap-1.5">
+                        Anuja<span class="text-white">.dev</span>
                     </a>
-                    <p class="text-gray-400 mt-4">
-                        Computer Science Engineering student and aspiring full-stack developer building modern web applications.
+                    <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+                        Computer Science Engineering student and aspiring Full Stack Java Developer building scalable enterprise applications and modern web solutions.
                     </p>
-                    <div class="flex gap-4 mt-4">
-                        <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer" 
-                           class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                    <div class="flex gap-3 mt-6">
+                        <a href="https://github.com/anuja-awchar" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all active:scale-95">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/anujaawchar" target="_blank" rel="noopener noreferrer" 
-                           class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#0077b5] transition-all">
+                        <a href="https://linkedin.com/in/anujaawchar" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0077b5] transition-all active:scale-95">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        
-                        <a href="mailto:anujaawchar@gmail.com" 
-                           class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-all">
+
+                        <a href="mailto:anujaawchar@gmail.com"
+                            class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-red-500 transition-all active:scale-95">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
+                    <h4 class="text-base font-bold mb-5 tracking-wide text-white">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm font-medium">
                         <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
-                        <li><a href="#skills" class="text-gray-400 hover:text-primary transition-colors">Skills</a></li>
-                        <li><a href="#projects" class="text-gray-400 hover:text-primary transition-colors">Projects</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About Me</a></li>
+                        <li><a href="#timeline" class="text-gray-400 hover:text-primary transition-colors">Education & Timeline</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-primary transition-colors">Skills & Java Expertise</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-primary transition-colors">Featured Projects</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-envelope text-primary"></i>
-                            anujaawchar@gmail.com
+                    <h4 class="text-base font-bold mb-5 tracking-wide text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-3 font-medium">
+                            <div class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>anujaawchar@gmail.com</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-map-marker-alt text-primary"></i>
-                            India
+                        <li class="flex items-center gap-3 font-medium">
+                            <div class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-primary">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>India</span>
+                        </li>
+                        <li class="flex items-center gap-3 font-medium">
+                            <div class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-green-500">
+                                <i class="fas fa-circle text-xs"></i>
+                            </div>
+                            <span class="text-green-400">Open for Work</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2025 <span class="text-primary font-semibold">Anuja Awchar</span>. All rights reserved.
+
+            <div class="border-t border-gray-800 pt-8 text-center text-xs sm:text-sm text-gray-400">
+                <p>
+                    © 2026 <strong class="text-white font-bold">Anuja Awchar</strong>. All rights reserved. • Built with Core Java passion & Tailwind CSS.
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" aria-label="Back to top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary to-purple-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all hover:shadow-xl hover:shadow-primary/30 z-50">
-        <i class="fas fa-arrow-up"></i>
+    <button id="backToTop" aria-label="Back to top"
+        class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-primary to-purple-600 text-white rounded-2xl shadow-xl opacity-0 invisible transition-all hover:shadow-primary/40 z-50 flex items-center justify-center active:scale-95">
+        <i class="fas fa-arrow-up text-lg"></i>
     </button>
 
     <script src="script.js"></script>
